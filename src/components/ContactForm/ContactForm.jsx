@@ -9,8 +9,8 @@ import {
   ErrorMsg,
 } from './ContactForm.styled';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectContacts } from 'redux/selectors';
-import { addContact } from 'redux/contactsOperations';
+import { selectContacts } from 'redux/contacts/selectors';
+import { addContact } from 'redux/contacts/contactsOperations';
 import { toast } from 'react-toastify';
 
 const PhonebookSchema = Yup.object().shape({

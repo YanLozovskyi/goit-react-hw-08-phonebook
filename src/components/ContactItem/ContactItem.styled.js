@@ -10,6 +10,22 @@ export const StyledContactItem = styled.li`
   font-size: 18px;
 `;
 
+export const EditButton = styled.button`
+  padding: 8px 16px;
+  margin-right: 5px;
+  background-color: #ff5959;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #e04949;
+  }
+`;
+
 export const DeleteButton = styled.button`
   padding: 8px 16px;
   background-color: #ff5959;
