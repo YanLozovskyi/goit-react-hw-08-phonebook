@@ -1,4 +1,4 @@
-import { logIn, logOut, register } from './authOperations';
+import { logIn, logOut, refreshUser, register } from './authOperations';
 
 const { createSlice } = require('@reduxjs/toolkit');
 
@@ -27,6 +27,10 @@ const authSlice = createSlice({
         state.user = { name: null, email: null };
         state.token = null;
         state.isLoggedIn = false;
+      })
+      .addCase(refreshUser.fulfilled, (state, { payload }) => {
+        state.user = payload;
+        state.isLoggedIn = true;
       });
   },
 });
