@@ -20,8 +20,8 @@ export const ContactList = () => {
       )}
       {contacts.length > 0 && (
         <ul>
-          {displayedContacts.map(({ name, id, phone }) => (
-            <ContactItem name={name} key={id} id={id} phone={phone} />
+          {displayedContacts.map(({ name, id, number }) => (
+            <ContactItem name={name} key={id} id={id} number={number} />
           ))}
         </ul>
       )}

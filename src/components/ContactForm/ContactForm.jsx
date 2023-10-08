@@ -52,7 +52,7 @@ export const ContactForm = () => {
         }
         if (
           contacts.find(
-            ({ phone: oldNumber }) =>
+            ({ number: oldNumber }) =>
               oldNumber.toLowerCase() === number.toLowerCase()
           )
         ) {
@@ -61,7 +61,7 @@ export const ContactForm = () => {
           return;
         }
         toast.success(`${name} added to your contact list.`);
-        dispatch(addContact({ name, phone: number }));
+        dispatch(addContact({ name, number }));
         actions.resetForm();
       }}
     >

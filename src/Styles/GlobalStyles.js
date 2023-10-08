@@ -14,6 +14,7 @@ export const GlobalStyle = createGlobalStyle`
     #111111,
     #333333
   );
+   color: ${({ theme }) => theme.colors.accent};
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;

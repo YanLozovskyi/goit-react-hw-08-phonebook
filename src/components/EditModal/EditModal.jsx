@@ -16,9 +16,9 @@ const customStyles = {
 
 Modal.setAppElement('#root');
 
-const EditModal = ({ modalIsOpen, closeModal, name, phone, id }) => {
+const EditModal = ({ modalIsOpen, closeModal, name, number, id }) => {
   const [nameValue, setNameValue] = useState(name);
-  const [phoneValue, setPhoneValue] = useState(phone);
+  const [numberValue, setNumberValue] = useState(number);
   const dispatch = useDispatch();
 
   const handleNameChange = e => {
@@ -26,13 +26,13 @@ const EditModal = ({ modalIsOpen, closeModal, name, phone, id }) => {
   };
 
   const handlePhoneChange = e => {
-    setPhoneValue(e.target.value);
+    setNumberValue(e.target.value);
   };
 
   const handleSubmit = e => {
     e.preventDefault();
 
-    const updatedContact = { id, name: nameValue, phone: phoneValue };
+    const updatedContact = { id, name: nameValue, number: numberValue };
 
     dispatch(editContact(updatedContact));
     closeModal();
@@ -47,7 +47,7 @@ const EditModal = ({ modalIsOpen, closeModal, name, phone, id }) => {
     >
       <form onSubmit={handleSubmit}>
         <input type="text" value={nameValue} onChange={handleNameChange} />
-        <input type="text" value={phoneValue} onChange={handlePhoneChange} />
+        <input type="text" value={numberValue} onChange={handlePhoneChange} />
         <button type="submit">Save</button>
       </form>
     </Modal>

@@ -6,3 +6,7 @@ export * from 'components/Filter/Filter';
 export * from 'components/Notifications/Notifications';
 export * from 'components/Section/Section';
 export * from 'components/Loader/Loader';
+export * from 'components/SharedLayout/SharedLayout';
+export * from 'components/Navigation/MainNav';
+export * from 'components/Navigation/AuthNav';
+export * from 'components/Navigation/UserMenu';

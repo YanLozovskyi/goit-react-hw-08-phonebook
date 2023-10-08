@@ -11,7 +11,7 @@ import { deleteContact } from 'redux/contacts/contactsOperations';
 import { selectIsDeleting } from 'redux/contacts/selectors';
 import EditModal from 'components/EditModal/EditModal';
 
-export const ContactItem = ({ name, id, phone }) => {
+export const ContactItem = ({ name, id, number }) => {
   const dispatch = useDispatch();
   const isDeleting = useSelector(selectIsDeleting);
   const [showModal, setShowModal] = useState(false);
@@ -32,7 +32,7 @@ export const ContactItem = ({ name, id, phone }) => {
   return (
     <>
       <StyledContactItem>
-        {name}: {phone}
+        {name}: {number}
         <div>
           <EditButton type="button" onClick={toggleModal}>
             <BiEdit />
@@ -50,7 +50,7 @@ export const ContactItem = ({ name, id, phone }) => {
           modalIsOpen={showModal}
           closeModal={toggleModal}
           name={name}
-          phone={phone}
+          number={number}
           id={id}
         />
       </StyledContactItem>
