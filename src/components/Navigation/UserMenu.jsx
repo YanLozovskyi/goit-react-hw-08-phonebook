@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { StyledNavLink, UserName } from './Nav.style';
+import { LogoutButton, StyledNavLink, UserName } from './Nav.style';
 import { selectUsername } from 'redux/auth/authSelectors';
 import { logOut } from 'redux/auth/authOperations';
 
@@ -10,10 +10,10 @@ export const UserMenu = () => {
   return (
     <>
       <StyledNavLink to="/profile">User Profile</StyledNavLink>
-      <UserName>Добро пожаловать , {name}</UserName>
-      <button type="button" onClick={() => dispatch(logOut())}>
+      <UserName>Welcome, {name}</UserName>
+      <LogoutButton type="button" onClick={() => dispatch(logOut())}>
         Logout
-      </button>
+      </LogoutButton>
     </>
   );
 };

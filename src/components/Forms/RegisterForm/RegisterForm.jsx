@@ -4,7 +4,6 @@ import { register } from 'redux/auth/authOperations';
 import {
   BtnWrap,
   EMailIcon,
-  FormButton,
   FormWrapper,
   PasswordIcon,
   PersonIcon,
@@ -12,7 +11,7 @@ import {
   StyledInput,
   StyledLabel,
 } from '../Form.style';
-import { Title } from 'components';
+import { StyledButton, Title } from 'components';
 
 export const RegisterForm = () => {
   const dispatch = useDispatch();
@@ -78,7 +77,7 @@ export const RegisterForm = () => {
         </StyledLabel>
 
         <BtnWrap>
-          <FormButton type="submit">Sign up</FormButton>
+          <StyledButton type="submit">Sign up</StyledButton>
         </BtnWrap>
       </StyledForm>
     </FormWrapper>

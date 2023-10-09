@@ -19,5 +19,6 @@ export * from 'components/Navigation/UserMenu';
 export * from 'components/StyleComponents/Section';
 export * from 'components/StyleComponents/Container';
 export * from 'components/StyleComponents/Title';
+export * from 'components/StyleComponents/Button';
 export * from 'components/Loader/Loader';
 export * from 'components/Notifications/Notifications';

@@ -81,7 +81,7 @@ export const BtnWrap = styled.div`
   justify-content: center;
 `;
 
-export const FormButton = styled.button`
+export const LoginButton = styled.button`
   width: 100px;
   padding: 15px 0;
   background-color: black;
@@ -89,7 +89,7 @@ export const FormButton = styled.button`
   border: none;
   border-radius: 10px;
   font-size: 16px;
-  transition: background-color 0.5s ease-in-out;
+  transition: background-color 250ms ease-in-out;
   display: flex;
   justify-content: center;
   align-items: center;

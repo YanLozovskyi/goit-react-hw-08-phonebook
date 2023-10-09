@@ -5,8 +5,8 @@ import { logIn } from 'redux/auth/authOperations';
 import {
   BtnWrap,
   EMailIcon,
-  FormButton,
   FormWrapper,
+  LoginButton,
   LoginIcon,
   PasswordIcon,
   StyledForm,
@@ -65,9 +65,9 @@ export const LoginForm = () => {
         </StyledLabel>
 
         <BtnWrap>
-          <FormButton type="submit">
+          <LoginButton type="submit">
             Login <LoginIcon />
-          </FormButton>
+          </LoginButton>
         </BtnWrap>
       </StyledForm>
     </FormWrapper>
