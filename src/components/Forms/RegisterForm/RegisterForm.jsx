@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { register } from 'redux/auth/authOperations';
 import {
-  BtnWrap,
   EMailIcon,
   FormWrapper,
   PasswordIcon,
@@ -76,9 +75,7 @@ export const RegisterForm = () => {
           <PasswordIcon />
         </StyledLabel>
 
-        <BtnWrap>
-          <StyledButton type="submit">Sign up</StyledButton>
-        </BtnWrap>
+        <StyledButton type="submit">Sign up</StyledButton>
       </StyledForm>
     </FormWrapper>
   );

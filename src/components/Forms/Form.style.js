@@ -76,13 +76,9 @@ export const LoginIcon = styled(BiLogIn)`
   width: 30px;
 `;
 
-export const BtnWrap = styled.div`
-  display: flex;
-  justify-content: center;
-`;
-
 export const LoginButton = styled.button`
   width: 100px;
+  margin: 0 auto;
   padding: 15px 0;
   background-color: black;
   color: #fff;

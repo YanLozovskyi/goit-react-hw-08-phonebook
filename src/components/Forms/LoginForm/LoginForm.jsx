@@ -3,7 +3,6 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { logIn } from 'redux/auth/authOperations';
 import {
-  BtnWrap,
   EMailIcon,
   FormWrapper,
   LoginButton,
@@ -64,11 +63,9 @@ export const LoginForm = () => {
           <PasswordIcon />
         </StyledLabel>
 
-        <BtnWrap>
-          <LoginButton type="submit">
-            Login <LoginIcon />
-          </LoginButton>
-        </BtnWrap>
+        <LoginButton type="submit">
+          Login <LoginIcon />
+        </LoginButton>
       </StyledForm>
     </FormWrapper>
   );

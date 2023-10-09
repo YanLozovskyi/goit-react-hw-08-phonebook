@@ -8,8 +8,12 @@ import {
   Text,
   Title,
 } from './HomeContent.style';
+import { useSelector } from 'react-redux';
+import { selectIsLoggedIn } from 'redux/auth/authSelectors';
 
 export const HomeContent = () => {
+  const isLoggedIn = useSelector(selectIsLoggedIn);
+
   return (
     <ContentWrap>
       <HeroWrap>
@@ -18,15 +22,19 @@ export const HomeContent = () => {
         <Text>
           With our web application, you can create and maintain your contact
           list hassle-free. No more messy handwritten notes or confusing paper
-          records.{' '}
-          <Link to="/register">
-            <u>Create a personal account</u>
-          </Link>{' '}
-          or{' '}
-          <Link to="/login">
-            <u>login</u>
-          </Link>{' '}
-          to an existing one to store your contacts.
+          records.
+          {!isLoggedIn && (
+            <Text>
+              <Link to="/register">
+                <u>Create a personal account</u>
+              </Link>{' '}
+              or{' '}
+              <Link to="/login">
+                <u>login</u>
+              </Link>{' '}
+              to an existing one to store your contacts.
+            </Text>
+          )}
         </Text>
         <ListWrap>
           <SubTitle>Key Features:</SubTitle>
