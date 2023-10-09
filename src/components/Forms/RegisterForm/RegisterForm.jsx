@@ -1,17 +1,19 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { register } from 'redux/auth/authOperations';
+import {
+  BtnWrap,
+  EMailIcon,
+  FormButton,
+  FormWrapper,
+  PasswordIcon,
+  PersonIcon,
+  StyledForm,
+  StyledInput,
+  StyledLabel,
+} from '../Form.style';
+import { Title } from 'components';
 
-const styles = {
-  form: {
-    width: 320,
-  },
-  label: {
-    display: 'flex',
-    flexDirection: 'column',
-    marginBottom: 15,
-  },
-};
 export const RegisterForm = () => {
   const dispatch = useDispatch();
   const [name, setName] = useState('');
@@ -39,37 +41,46 @@ export const RegisterForm = () => {
     setPassword('');
   };
   return (
-    <div>
-      <h1>Страница регистрации</h1>
+    <FormWrapper>
+      <Title>Sign up Form</Title>
+      <StyledForm onSubmit={handleSubmit}>
+        <StyledLabel>
+          Name
+          <StyledInput
+            type="text"
+            name="name"
+            value={name}
+            onChange={handleChange}
+          />
+          <PersonIcon />
+        </StyledLabel>
 
-      <form onSubmit={handleSubmit} style={styles.form}>
-        <label style={styles.label}>
-          Имя
-          <input type="text" name="name" value={name} onChange={handleChange} />
-        </label>
-
-        <label style={styles.label}>
-          Почта
-          <input
+        <StyledLabel>
+          Email
+          <StyledInput
             type="email"
             name="email"
             value={email}
             onChange={handleChange}
           />
-        </label>
+          <EMailIcon />
+        </StyledLabel>
 
-        <label style={styles.label}>
-          Пароль
-          <input
+        <StyledLabel>
+          Password
+          <StyledInput
             type="password"
             name="password"
             value={password}
             onChange={handleChange}
           />
-        </label>
+          <PasswordIcon />
+        </StyledLabel>
 
-        <button type="submit">Зарегистрироваться</button>
-      </form>
-    </div>
+        <BtnWrap>
+          <FormButton type="submit">Sign up</FormButton>
+        </BtnWrap>
+      </StyledForm>
+    </FormWrapper>
   );
 };

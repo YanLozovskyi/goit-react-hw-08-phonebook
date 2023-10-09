@@ -1,17 +1,18 @@
+import { Title } from 'components';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { logIn } from 'redux/auth/authOperations';
-
-const styles = {
-  form: {
-    width: 320,
-  },
-  label: {
-    display: 'flex',
-    flexDirection: 'column',
-    marginBottom: 15,
-  },
-};
+import {
+  BtnWrap,
+  EMailIcon,
+  FormButton,
+  FormWrapper,
+  LoginIcon,
+  PasswordIcon,
+  StyledForm,
+  StyledInput,
+  StyledLabel,
+} from '../Form.style';
 
 export const LoginForm = () => {
   const dispatch = useDispatch();
@@ -37,32 +38,38 @@ export const LoginForm = () => {
   };
 
   return (
-    <div>
-      <h1>Страница логина</h1>
+    <FormWrapper>
+      <Title>Sign in Form</Title>
 
-      <form onSubmit={handleSubmit} style={styles.form}>
-        <label style={styles.label}>
-          Почта
-          <input
+      <StyledForm onSubmit={handleSubmit}>
+        <StyledLabel>
+          Email
+          <StyledInput
             type="email"
             name="email"
             value={email}
             onChange={handleChange}
           />
-        </label>
+          <EMailIcon />
+        </StyledLabel>
 
-        <label style={styles.label}>
-          Пароль
-          <input
+        <StyledLabel>
+          Password
+          <StyledInput
             type="password"
             name="password"
             value={password}
             onChange={handleChange}
           />
-        </label>
+          <PasswordIcon />
+        </StyledLabel>
 
-        <button type="submit">Войти</button>
-      </form>
-    </div>
+        <BtnWrap>
+          <FormButton type="submit">
+            Login <LoginIcon />
+          </FormButton>
+        </BtnWrap>
+      </StyledForm>
+    </FormWrapper>
   );
 };

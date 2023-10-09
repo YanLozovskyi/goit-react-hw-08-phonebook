@@ -1,5 +1,5 @@
-import { AuthNav, MainNav, UserMenu } from 'components';
-import { Header, NavWrap, Wrap, Container } from './AppBar.style';
+import { AuthNav, MainNav, UserMenu, Container } from 'components';
+import { Header, NavWrap, Wrap } from './AppBar.style';
 import { useSelector } from 'react-redux';
 import { selectIsLoggedIn } from 'redux/auth/authSelectors';
 

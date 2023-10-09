@@ -10,10 +10,10 @@ export const StyledNavLink = styled(NavLink)`
   transition: color 250ms ease-in-out;
 
   &.active {
-    color: ${({ theme }) => theme.colors.accent};
+    color: ${({ theme }) => theme.colors.accentHover};
   }
   &:hover {
-    color: ${({ theme }) => theme.colors.accent};
+    color: ${({ theme }) => theme.colors.accentHover};
   }
 `;
 
@@ -25,7 +25,7 @@ export const StyledLink = styled(Link)`
   font-weight: 600;
   transition: color 250ms ease-in-out;
   &:hover {
-    color: ${({ theme }) => theme.colors.accent};
+    color: ${({ theme }) => theme.colors.accentHover};
   }
 `;
 export const UserName = styled.p`

@@ -1,4 +1,4 @@
-import { Notifications, ContactItem, Filter, Section } from 'components';
+import { Notifications, ContactItem, Filter, Section, Title } from 'components';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchContacts } from 'redux/contacts/contactsOperations';
@@ -20,7 +20,8 @@ export const ContactList = () => {
 
   return (
     <>
-      <Section title="Contacts">
+      <Section>
+        <Title>Contacts</Title>
         <Filter />
         {contacts.length > 0 && displayedContacts.length === 0 && (
           <Notifications message={'No one found with that name.'} />
