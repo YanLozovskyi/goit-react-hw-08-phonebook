@@ -1,1 +1,0 @@
-{"version":3,"file":"static/js/415.6321102f.chunk.js","mappings":"2KAMA,UAJa,WACX,OAAOA,EAAAA,EAAAA,KAACC,EAAAA,GAAW,GACrB,C","sources":["pages/Home.jsx"],"sourcesContent":["import { HomeContent } from 'components';\n\nconst Home = () => {\n  return <HomeContent />;\n};\n\nexport default Home;\n"],"names":["_jsx","HomeContent"],"sourceRoot":""}
